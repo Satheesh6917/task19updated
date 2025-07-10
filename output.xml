@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-10T20:05:54.722330" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\admin\Downloads\RobotFramework_POM_Login_Project\tests\login_test.robot">
+<test id="s1-t1" name="Verify User Can Login And Logout Using POM" line="7">
+<kw name="Login To Application" owner="common_keywords">
+<kw name="Open Login Page" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-10T20:05:55.137809" level="INFO">Opening browser 'chrome' to base url 'https://robotsparebinindustries.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-10T20:05:55.137534" elapsed="2.331312"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-10T20:05:57.469121" elapsed="0.037572"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-10T20:05:57.506932" elapsed="0.034590"/>
+</kw>
+<doc>Opens the login page in the browser</doc>
+<status status="PASS" start="2025-07-10T20:05:55.136860" elapsed="2.404814"/>
+</kw>
+<kw name="Enter Credentials" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-10T20:05:57.543066" level="INFO">Typing text 'maria' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-10T20:05:57.542653" elapsed="0.213763"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-10T20:05:57.757267" level="INFO">Typing text 'thoushallnotpass' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-10T20:05:57.756763" elapsed="0.142322"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Inputs the username and password</doc>
+<status status="PASS" start="2025-07-10T20:05:57.542006" elapsed="0.357217"/>
+</kw>
+<kw name="Submit Login" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-10T20:05:57.899933" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-10T20:05:57.899736" elapsed="0.112667"/>
+</kw>
+<doc>Clicks the login button to submit credentials</doc>
+<status status="PASS" start="2025-07-10T20:05:57.899423" elapsed="0.113173"/>
+</kw>
+<kw name="Verify Login Successful" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:logout</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-10T20:05:58.013420" elapsed="0.527534"/>
+</kw>
+<doc>Verifies successful login by checking for the logout button</doc>
+<status status="PASS" start="2025-07-10T20:05:58.012919" elapsed="0.528168"/>
+</kw>
+<doc>Opens login page, inputs credentials, submits, verifies login</doc>
+<status status="PASS" start="2025-07-10T20:05:55.136495" elapsed="3.404674"/>
+</kw>
+<kw name="Logout From Application" owner="common_keywords">
+<kw name="Logout" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-10T20:05:58.542396" level="INFO">Clicking button 'id:logout'.</msg>
+<arg>id:logout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-10T20:05:58.542197" elapsed="0.096058"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-10T20:05:58.638438" elapsed="2.188493"/>
+</kw>
+<doc>Logs out and closes the browser</doc>
+<status status="PASS" start="2025-07-10T20:05:58.541937" elapsed="2.285437"/>
+</kw>
+<doc>Logs out and closes the browser</doc>
+<status status="PASS" start="2025-07-10T20:05:58.541590" elapsed="2.286088"/>
+</kw>
+<doc>This test verifies login and logout functionality using POM in Robot Framework.</doc>
+<status status="PASS" start="2025-07-10T20:05:55.135638" elapsed="5.693179"/>
+</test>
+<status status="PASS" start="2025-07-10T20:05:54.723880" elapsed="6.108187"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
